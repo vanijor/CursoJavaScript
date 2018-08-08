@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Funções</title>
+	<meta charset="UTF-8"/>
+	<script>
+		var numeros = new Array(10,2,5,30,25,19,20,50);
+		function media(nums){
+			var tam = nums.length;
+			var soma = 0;
+			for (var i = 0 ; i < tam ; i++) {
+				soma += nums[i];
+			}
+			return Math.round(soma / tam);
+		}
+		document.write(media(numeros));
+		/*
+		function soma(n1,n2){
+			return n1 + n2;
+		}
+		var res = soma(7,7);
+		document.write(res);
+
+		function soma(n1,n2){
+			var res = n1 + n2;
+			document.write(res);
+		}
+		soma(1,2);*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

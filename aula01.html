@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CFB Cursos - Javascript</title>
+	<script>
+
+	</script>
+</head>
+<body>
+	<!-- <p id="texto">CFB Cursos</p> -->
+	<p>CFB Cursos</p>
+	<h2>Javascript</h2>
+	<p>Jorge</p>
+	<h2>Hélio</h2>
+	<p>Hélio</p>
+	<h2>Gaby</h2>
+	<hr>
+
+	<script>
+		//document.getElementById("texto").style.color="#f00";
+		
+		var tagsp =document.getElementsByTagName("*");
+		tagsp[8].innerHTML="NOVO TEXTO";
+		tagsp[8].style.color="#f00";
+
+		//var tagsp =document.getElementsByTagName("p")[2];
+		//document.write(tagsp.innerHTML);
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Recursividade</title>
+	<meta charset="UTF-8"/>
+	<style>
+		#quad{
+			border: 1px solid #000;
+			background-color: #f00;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	<script>
+		 function contador(min,max){
+		 	document.write(min + "<br>");
+		 	if (min < max) {
+		 		contador(++min,max);
+		 	}
+		 }
+		 contador(0,10);
+		 function fatorial(n){
+		 	if (n == 1) {
+		 		return 1;
+		 	}
+		 	return n*fatorial(n-1);	
+		 }
+		 document.write(fatorial(50));
+	</script>
+</head>
+<body>
+	<div id="quad"></div>
+</body>
+</html>

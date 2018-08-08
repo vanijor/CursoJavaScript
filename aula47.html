@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Métodos para manipulação de string P2</title>
+	<meta charset="UTF-8"/>
+	<style></style>
+	<script></script>	
+</head>
+<body>
+	<p id="txt">CFB Cursos - Curso de Javascript - aula 47 do curso de javascript</p>
+	<script>
+		//metodo search ele somente retorna o inicio da posicao, e nao funciona array
+		//replace troca a palavra , e se colocar o modificador "g" ele troca todas as ocorrencias 
+		//charAt retorna o caracter informando a posicao
+		//charCodeAt retorna o codigo do caracter
+		var texto = document.getElementById("txt").innerHTML;
+		var txt2 = " - aula 47 do curso de javascript"
+		var res = texto.search(/aula/i);
+		var res1 = texto.replace(/curso/ig, "teste");
+		var res2 = texto.charAt(2);
+		var res3 = texto.charCodeAt(0);
+		var res4 = texto.concat(txt2);
+		document.write(res+" >>> Método search<br>"+res1+" >>> Método replace<br>"+res2+" >>> Método charAt<br>"+res3+" >>> Método charCodeAt<br>"+String.fromCharCode(67)+" >>> Retorna código em caracter<br>"+res4+" >>> Método concat<br>");
+	</script>
+</body>
+</html>

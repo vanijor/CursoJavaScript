@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Strings P1 - Match</title>
+	<meta charset="UTF-8"/>
+	<style>
+		
+	</style>
+	<script>
+		
+	</script>
+	
+</head>
+<body>
+	<p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+	<script>
+		var texto = document.getElementById("txt").innerHTML;
+		var res = texto.match(/[^a-g]/ig);
+		document.write(res + " : " + res.length + "<br>");
+		for (var i = 0; i < res.length; i++) {
+			document.write(" "+res[i]);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Solução para exercicios aula 34</title>
+	<meta charset="UTF-8"/>
+	<style>
+		#dv1{width: 96px;height: 96px;background: url(1.png) no-repeat;background-size: 100%;position: absolute;left: 0;top:0;}
+		body{background: url(2.png);}
+	</style>
+	<script>
+		var px = 0;
+		var py = 0;
+
+		function move(){
+			var obj = document.getElementById("dv1");
+			var tecla = event.keyCode;
+			//37=seta esqueda , 38= seta cima, 39=direita, 40=baixo, 13=enter
+			if (tecla == 37) {
+				px -=10;
+				obj.style.left = px + "px";
+			} else if (tecla == 38) {
+				py -=10;
+				obj.style.top = py + "px";
+			} else if (tecla == 39) {
+				px +=10;
+				obj.style.left = px + "px";
+			} else if (tecla == 40) {
+				py +=10;
+				obj.style.top = py + "px";
+			}  else if (tecla == 13) {
+				obj.style.backgroundSize = "100%";
+				obj.style.backgroundImage = "url('1.png')";
+				obj.style.backgroundRepeat = "no-repeat";
+				alert("Event keydown removido");
+				this.removeEventListener("keydown",move);
+			}
+		}
+
+		function addClick(){			
+			document.addEventListener("keydown",move);
+			obj.style.backgroundSize = "100%";
+			obj.style.backgroundImage = "url('2.png')";
+			obj.style.backgroundRepeat = "no-repeat";
+		}
+		function iniciar(){
+			obj = document.getElementById("dv1");
+			obj.addEventListener("click",addClick);
+		}
+		window.addEventListener("load", iniciar);
+	</script>
+</head>
+<body>
+	<div id="dv1"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Métodos para manipulação de string P3</title>
+	<meta charset="UTF-8"/>
+	<style></style>
+	<script></script>	
+</head>
+<body>
+	<p id="txt">CFB Cursos - Curso de Javascript - aula 48 do curso de javascript</p>
+	<script>		
+		//metodo indexOf retorna a posicao do primeiro caracter encontrado e é key Sensitive
+		//metodo lastIndexOf retorna a posicao do ultimo caracter encontrado e é key Sensitive
+		//metodo slice recorta uma parte posicao inicial ate o posicao final
+		//metodo split retorna uma palavra pelo array
+		//metodo substr recorta uma parte posicao inicial ate o tamanho final
+		//metodo toLowerCase tranforma todos os caracteres para minusculo
+		//metodo toLowerCase tranforma todos os caracteres para maiusculo
+		var texto = document.getElementById("txt").innerHTML;
+		var res = texto.indexOf("C");
+		var res1 = texto.lastIndexOf("C");
+		var res2 = texto.slice(3,10);
+		var res3 = texto.split(" ");
+		var res4 = texto.substr(4,5);
+		var res5 = texto.toLowerCase();
+		var res6 = texto.toUpperCase();
+		if (res < 0) {
+			document.write("Letra não encontrada");
+		}else{
+			document.write(res+"<br>");
+		} 
+		if (res1 < 0){
+			document.write("Letra não encontrada")
+		} else {
+			document.write(res1);
+		}
+		document.write("<br>"+res2);
+		document.write("<br>"+res3[0]);
+		document.write("<br>"+res4);
+		document.write("<br>"+res5);
+		document.write("<br>"+res6);
+	</script>
+</body>
+</html>
