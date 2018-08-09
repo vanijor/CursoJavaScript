@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<title>CFB Cursos - Javascript - Objeto Window - P1 (open, close)</title>
+	<title>CFB Cursos - Javascript - Aula 62 - Objeto Window - P1 (open, close)</title>
 	<meta charset="UTF-8"/>
-	<style>
-		
-	</style>
+	<style></style>
 	<script>
-		
+		var minhaJanela;
+		function abreJ(){			
+			minhaJanela = window.open("aula62_1.html","_blank","width=300,height=300,top=300,left=300");//link,target=_blank(novajanela)ou_self(mesmajanela)
+		}
+		function fechaJ(){			
+			minhaJanela.close();
+		}
 	</script>	
 </head>
 <body>
-	
+	<button onclick="abreJ()">Abre Nova Janela</button>
+	<button onclick="fechaJ()">Fechar Janela</button>
+	<iframe name="cfb" src=""></iframe>
 </body>
 </html>

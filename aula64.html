@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 64 - Objeto Window - P3 (scrollBy, frames, length, parent)
+</title>
+	<meta charset="UTF-8"/>
+	<style>
+		#painel{
+			width: 2000px;
+			height: 2000px;
+			padding: 15px;
+			border-radius: 10px;
+			border: 1px solid #000;
+			background-color: #bbb;
+		}
+		iframe{
+			width: 400px;
+			height: 300px;
+		}
+	</style>
+	<script>
+		
+		function rolar(){
+			window.scrollBy(1000,1000);//permite rolar ate uma posicao determinada
+		}
+		function inicia(){
+			var qtde = window.length;
+			var info = document.getElementById("info").innerHTML = qtde;
+			document.getElementById("btnPos").addEventListener("click",rolar);
+			painel = document.getElementById("painel");
+			
+			window.frames[1].location = "http://cfbcursos.com.br";
+			
+		}
+		window.addEventListener("load",inicia);
+
+	</script>	
+</head>
+<body>
+	<button id="btnPos">Rolar</button>
+	<div id="painel">
+		<iframe src="aula64_1.html"></iframe>
+		<iframe src=""></iframe>
+		<iframe src=""></iframe>
+		<div id="info"></div>
+	</div>
+</body>
+</html>
