@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 70 - LocalStorage (Web Storage) - P1</title>
+	<meta charset="UTF-8"/>
+	<style>
+		
+	</style>
+	<script>
+		if (typeof(Storage) != "undefined") {
+			localStorage.setItem("canal", "CFBCursos");
+			//localStorage.removeItem("canal");
+			var txt = localStorage.getItem("canal");// ou var txt = localStorage.canal; colocar direto a chave
+			document.write(txt);
+			if (localStorage.visitas) {
+				localStorage.visitas = Number(localStorage.visitas) + 1;
+			} else {
+				localStorage.setItem("visitas",1);//ou localStorage.visitas=1;
+			}
+			document.write("Visitas: " + localStorage.visitas);
+		} else {
+			document.write("Sem suporte a web storage!!");
+		}
+		
+	</script>		
+</head>
+<body>
+	
+</body>
+</html>

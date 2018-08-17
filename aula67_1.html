@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 67 - Objeto History</title>
+	<meta charset="UTF-8"/>
+	<style>
+		
+	</style>
+	<script>
+		var painel;
+		var btBack;
+		var btForward;
+		var btGo;
+		function histBack(){
+			window.history.back();
+		}
+		function histForward(){
+			window.history.forward();
+		}
+		function histGo(){
+			window.history.go(-2); // avanca ou volta 2 ou mais paginas
+		}
+		function inicia(){
+			btBack = document.getElementById("btnBack");
+			btBack.addEventListener("click",histBack);
+			
+			btForward = document.getElementById("btnForward");
+			btForward.addEventListener("click",histForward);
+			
+			btGo = document.getElementById("btnBack2");
+			btGo.addEventListener("click",histGo);
+
+			painel = document.getElementById("info");
+			painel.innerHTML = history.length;
+		}
+		window.addEventListener("load",inicia);
+	</script>		
+</head>
+<body>
+	<h1>Página 2</h1>
+	<p id="info"></p>
+
+	<a href="aula67.html">Home</a>
+	<a href="aula67_1.html">Página 2</a>
+	<a href="aula67_2.html">Página 3</a><hr>
+	<button id="btnBack">Voltar</button>
+	<button id="btnForward">Avançar</button>
+	<button id="btnBack2">Voltar x2</button>
+</body>
+</html>

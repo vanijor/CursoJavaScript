@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 69 - Objeto Location - P2</title>
+	<meta charset="UTF-8"/>
+	<style>
+		
+	</style>
+	<script>
+		//location.assign("aula69_1.html");//direciona direto para uma url selecionada
+		//location.replace("aula69_1.html");//direciona direto para uma url selecionada, remove a url do historico
+		function p2(){
+			location.replace("aula69_1.html");
+		}
+		function rec(){
+			location.reload();//fica fazendo reload da url
+		}
+	</script>		
+</head>
+<body>
+	<h1>Objeto location</h1>
+	<button id="btnP2" onclick="p2()">Página 2</button>
+	<button id="btnReload" onclick="rec()">Recarregar</button>
+</body>
+</html>

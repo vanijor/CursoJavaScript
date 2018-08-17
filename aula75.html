@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 75 - insertBefore / childNodes, inserindo elementos HTML</title>
+	<meta charset="UTF-8"/>
+	<style>
+		
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			var p = document.createElement("p");
+			var t = document.createTextNode("Curso de Javascript - CFB Cursos");
+			//p.textContent = "CFB Cursos";
+			p.appendChild(t);
+			document.body.appendChild(p);
+			document.getElementById("btnContar").addEventListener("click",function(){
+				var lista =  document.getElementById("listaElementos");
+				var num = lista.childNodes.length;
+				alert("Número de Elementos da Lista: " + num);
+			});
+			document.getElementById("btnAdd").addEventListener("click",function(){
+				var lista = document.getElementById("listaElementos");
+				var texto = document.getElementById("fnovo");
+				var li = document.createElement("li");
+				li.textContent = texto.value;
+				lista.insertBefore(li,lista.childNodes[0]);
+				texto.value = "";
+				texto.focus();
+			});
+		});
+	</script>		
+</head>
+<body>
+	<input type="text" id="fnovo">
+	<button id="btnAdd">Adicionar</button>
+	<button id="btnContar">Contar</button><br><br>
+	<ul id="listaElementos"></ul>
+</body>
+</html>

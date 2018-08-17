@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 72 - SessionStorage (Web Storage)</title>
+	<meta charset="UTF-8"/>
+	<style>
+		body{
+			background-color: #00f;
+			color: #fff;
+		}
+	</style>
+	<script>
+		function inicia(){
+			document.getElementById("painel").innerHTML = sessionStorage.nome;
+		}
+		window.addEventListener("load",inicia);
+	</script>		
+</head>
+<body>
+	<h1>Página 3</h1>
+	<div id="painel"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 66 - Objeto Screen</title>
+	<meta charset="UTF-8"/>
+	<style>
+		#painel{
+			width: 400px;
+			height: 500px;
+			border: 1px solid #000;
+			border-radius: 10px;
+			padding: 10px;
+		}
+	</style>
+	<script>
+		var painel;
+		
+		function inicia(){
+			painel = document.getElementById("painel");
+			painel.innerHTML += "Resolução: " + screen.width + "px X " + screen.height + "px<hr>";
+			painel.innerHTML += "Resolução Disponível: " + screen.availWidth + "px X " + screen.availHeight + "px<hr>";
+			painel.innerHTML += "Profundidade de Cores (Imagens): " + screen.colorDepth + "bits <hr>";
+			painel.innerHTML += "Resolução Cor da Tela (pixel): " + screen.pixelDepth + "bits/pixel <hr>";
+		}
+		window.addEventListener("load",inicia);
+	</script>	
+</head>
+<body>
+	<div id="painel"></div>
+</body>
+</html>

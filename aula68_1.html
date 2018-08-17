@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>CFB Cursos - Javascript - Aula 68 - Objeto Location - P1</title>
+	<meta charset="UTF-8"/>
+	<style>
+		body{
+			background-color: #f00;
+			color: #fff;
+		}
+	</style>
+	<script>
+		var aux = location.hash;
+		var dados = aux.split("#");
+		var v1 = dados[1];
+		var v2 = dados[2];
+		document.write(v1);
+		document.write("<br>");
+		var h = location.href; //obter o endereco nao setar um endereco
+		document.write(h);
+		document.write("<hr>");
+		var o = location.origin;//mostrar o protocolo, hostname , numero da porta
+		document.write(o);
+		document.write("<hr>");
+		var p = location.pathname;//caminho apos o protocolo e o hostname
+		document.write(p);
+		document.write("<hr>");
+		var po = location.port;//mostra o numero da porta
+		document.write(po);
+		document.write("<hr>");
+		var prot = location.protocol;//mostra o numero da porta
+		document.write(prot);
+		document.write("<hr>");
+		aux = location.search;
+		dados = aux.split("?");
+		v1 = dados[1].split("=")[1];
+		document.write(v1);
+		document.write("<br>");
+	</script>		
+</head>
+<body>
+	<h1>Página 2</h1>
+
+	<a href="aula68.html">Voltar</a>
+	
+</body>
+</html>
